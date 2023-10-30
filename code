@@ -120,6 +120,7 @@ namespace Pr100
             transports.Add(new Motorcycle("80 km/h", "Black and Deep Red", "alrendo ts", "A", "2", "Electric", true));
             transports.Add(new Scooter("35 km/h", "Red", "kugoo 3", "Be above 60 kg", "2", "Electric", false));
             transports.Add(new Scooter("40 km/h", "Yellow", "xiaomi", "Be under 60 kg", "2", "Electric", false));
+            transports = transports.OrderBy(t => t.Model).ToList();
 
             foreach (Transport transport in transports)
             {
