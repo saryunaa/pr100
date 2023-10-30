@@ -4,34 +4,6 @@ using Pr100.Classes;
 
 namespace Pr100
 {
-    abstract class Transport
-    {
-        public string Speed { get; set; }
-        public string Color { get; set; }
-        public string Model { get; set; }
-        public string LicenseCategory { get; set; }
-        public bool IsRented { get; set; }
-
-        public Transport(string speed, string color, string model, string licenseCategory, bool isRented)
-        {
-            Speed = speed;
-            Color = color;
-            Model = model;
-            LicenseCategory = licenseCategory;
-            IsRented = isRented;
-        }
-
-        protected Transport(string speed, string color, string model, string licenseCategory)
-        {
-            Speed = speed;
-            Color = color;
-            Model = model;
-            LicenseCategory = licenseCategory;
-        }
-
-        public abstract void PrintInfo();
-    }
-
     class Program
     {
         static void Main(string[] args)
@@ -48,7 +20,8 @@ namespace Pr100
             transports.Add(new Motorcycle("80 km/h", "Black and Deep Red", "alrendo ts", "A", "2", "Electric", true));
             transports.Add(new Scooter("35 km/h", "Red", "kugoo 3", "Be above 60 kg", "2", "Electric", false));
             transports.Add(new Scooter("40 km/h", "Yellow", "xiaomi", "Be under 60 kg", "2", "Electric", false));
-
+            transports = transports.OrderBy(t => t.Model).ToList(Console.WriteLine("Company's transport:\n"));
+            
             foreach (Transport transport in transports)
             {
                 transport.PrintInfo();
