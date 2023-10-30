@@ -38,16 +38,16 @@ namespace Pr100
         {
             List<Transport> transports = new List<Transport>();
 
-            transports.Add(new Boat("187 km/h", "Blue", "Sea Ray", "Do not need", "Gas", true));
-            transports.Add(new Boat("152 km/h", "White and Black", "Victory 570", "Do not need", "Gas", false));
-            transports.Add(new Car("220 km/h", "Red", "Porsche 911", "B", "4", "Gas", true));
-            transports.Add(new Car("190 km/h", "Black", "Mercedes-Benz S-class", "B", "4", "Gas", true));
-            transports.Add(new Bicycle("35 km/h", "Green and White", "Scott Addict", "Be above 14 y.old", true));
-            transports.Add(new Bicycle("15 km/h", "Blue and White", "NovaTrack Juster", "Be under 60 kg", false));
-            transports.Add(new Motorcycle("160 km/h", "Black", "Harley Davidson", "A", "2", "Gas", false));
-            transports.Add(new Motorcycle("80 km/h", "Black and Deep Red", "Alrendo TS", "A", "2", "Electric", true));
-            transports.Add(new Scooter("35 km/h", "Red", "Kugoo 3", "Be above 60 kg", "2", "Electric", false));
-            transports.Add(new Scooter("40 km/h", "Yellow", "Xiaomi", "Be under 60 kg", "2", "Electric", false));
+            transports.Add(new Boat("187 km/h", "Blue", "sea ray", "Do not need", "Gas", true));
+            transports.Add(new Boat("152 km/h", "White and Black", "victory 570", "Do not need", "Gas", false));
+            transports.Add(new Car("220 km/h", "Red", "porsche 911", "B", "4", "Gas", true));
+            transports.Add(new Car("190 km/h", "Black", "mercedes-benz s-class", "B", "4", "Gas", true));
+            transports.Add(new Bicycle("35 km/h", "Green and White", "scott addict", "Be above 14 y.old", true));
+            transports.Add(new Bicycle("15 km/h", "Blue and White", "novatrack juster", "Be under 60 kg", false));
+            transports.Add(new Motorcycle("160 km/h", "Black", "harley davidson", "A", "2", "Gas", false));
+            transports.Add(new Motorcycle("80 km/h", "Black and Deep Red", "alrendo ts", "A", "2", "Electric", true));
+            transports.Add(new Scooter("35 km/h", "Red", "kugoo 3", "Be above 60 kg", "2", "Electric", false));
+            transports.Add(new Scooter("40 km/h", "Yellow", "xiaomi", "Be under 60 kg", "2", "Electric", false));
 
             foreach (Transport transport in transports)
             {
@@ -73,7 +73,8 @@ namespace Pr100
                                 string Answer = Console.ReadLine();
                                 if (Answer.ToLower() == "yes")
                                 {
-                                    Console.WriteLine(transport.Model + " has been rented by you"); ;
+                                    Console.WriteLine(transport.Model + " has been rented by you");
+                                    transport.IsRented = true;
                                 }
                                 else
                                 {
